@@ -1,4 +1,3 @@
-import { NodeNextRequest } from "next/dist/server/base-http/node";
 import Image from "next/image";
 
 export default function Card({
