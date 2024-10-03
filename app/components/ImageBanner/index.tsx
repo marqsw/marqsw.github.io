@@ -4,7 +4,7 @@ export default function ImageBanner({ imagePath }: { imagePath: string }) {
       <img className="absolute blur-3xl" src={imagePath} />
 
       <img
-        className="rounded-2xl border-2 border-gray-800 drop-shadow-2xl"
+        className="relative rounded-2xl drop-shadow-2xl"
         src={imagePath}
       />
     </div>
