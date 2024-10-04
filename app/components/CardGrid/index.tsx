@@ -9,10 +9,8 @@ interface CardProps {
   link?: string;
 }
 
-export default function CardGrid({cardProps}: {cardProps: CardProps[]}) {
-    
-    console.log(cardProps)
-    return (
+export default function CardGrid({ cardProps }: { cardProps: CardProps[] }) {
+  return (
     <div className="flex flex-wrap justify-center gap-5">
       {cardProps.map((card) => {
         return (

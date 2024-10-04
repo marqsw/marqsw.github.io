@@ -85,7 +85,7 @@ export default function Home() {
         })}
       </div>
 
-      <SectionTitle>Who Am I?</SectionTitle>
+      {/* <SectionTitle>Who Am I?</SectionTitle> */}
         
 
 
