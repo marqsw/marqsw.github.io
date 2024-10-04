@@ -7,7 +7,7 @@ const projects = [
   {
     title: "AI Chess Engine",
     description:
-      "An AI that learns to play all kinds of board games and intelligently trains itself, without any assistance or training data",
+      "An intelligent, neural network based AI that masters any board games autonomously without any human assistance",
     imagePath: "/home/chess-engine-cover.png",
     link: "/programming/ai-chess-engine",
   },
