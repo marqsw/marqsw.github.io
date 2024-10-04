@@ -6,26 +6,41 @@ import Card from "./components/Card";
 const projects = [
   {
     title: "AI Chess Engine",
+    subtitle: "PyTorch",
+    label: '2023',
     description:
       "An intelligent, neural network based AI that masters any board games autonomously without any human assistance",
     imagePath: "/home/chess-engine-cover.png",
     link: "/programming/ai-chess-engine",
   },
 
-  // {
-  //   title: "MultiCam",
-  //   description: "An iPhone camera app with multicam and fine camera control",
-  // },
+  {
+    title: "Portfolio Website",
+    subtitle: 'React',
+    label: '2024',
+    description:
+      "An elegant and responsive website to organises and introduces some projects of mine",
+    imagePath: "/home/portfolio-website-cover.png",
+    link: "/programming/portfolio-webesite",
+  },
 
-  // {
-  //   title: "Sensors",
-  //   description:
-  //     "A cross-platform app that utilises all the sensors in a phone",
-  // },
-  // {
-  //   title: "Financial App",
-  //   description: "An iOS app to monitor your money",
-  // },
+  {
+    title: "Sensors",
+    subtitle: "React Native",
+    label: "Coming in late October",
+    description:
+      "A beautiful, cross-platform app that turns your phone into a measuring tool, make use of the amazing technologies embeded in a phone",
+  },
+
+  {
+    title: "MultiCam",
+    subtitle: "React Native",
+    label: "Upcoming...",
+    description: "A mobile camera app with intuitive and advanced controls for daily and professional use",
+  },
+
+
+
 ].reverse();
 
 const contacts = [
@@ -72,16 +87,12 @@ export default function Home() {
         {projects.map((project) => {
           return (
             <div key={project.title}>
-              <Card
-                title={project.title}
-                description={project.description}
-                imagePath={project.imagePath}
-                link={project.link}
-              />
+              <Card {...project} />
             </div>
           );
         })}
       </div>
     </div>
+
   );
 }

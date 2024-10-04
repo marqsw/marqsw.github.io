@@ -13,7 +13,7 @@ export default function Page() {
         </div>
       </LinkButton>
 
-      <div className="flex flex-col gap-5 text-justify">
+      <div className="flex flex-col gap-5">
         <p className="text-3xl font-extrabold">Background</p>
 
         <p className="text-2xl font-bold">The Rise of Chess Engines</p>

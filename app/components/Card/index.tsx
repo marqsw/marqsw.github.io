@@ -2,11 +2,15 @@ import Image from "next/image";
 
 export default function Card({
   title,
+  subtitle,
+  label,
   description,
   imagePath,
   link,
 }: {
   title?: string;
+  subtitle?: string;
+  label?: string;
   description?: string;
   imagePath?: string;
   link?: string;
@@ -18,11 +22,20 @@ export default function Card({
       </a>
 
       <div
-        className={`pointer-events-none relative flex h-96 w-72 flex-col justify-end self-center rounded-3xl bg-cover bg-center text-white`}
+        className={`pointer-events-none relative flex h-96 w-72 flex-col justify-end self-center rounded-3xl border-2 border-gray-800 bg-cover bg-center text-white`}
         style={{
           backgroundImage: `url(${imagePath})`,
         }}
       >
+
+        {label && (
+          <div className="flex flex-col items-end">
+            <div className="m-3 rounded-lg border-2 border-gray-800 bg-slate-800 px-2 py-1 opacity-75">
+              <p className="text-xs">{label}</p>
+            </div>
+          </div>
+        )}
+
         <div
           className="flex h-full w-full flex-col justify-end rounded-3xl p-5 text-left"
           style={{
@@ -31,6 +44,7 @@ export default function Card({
               "linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 85%)",
           }}
         >
+          <p>{subtitle}</p>
           <p className="text-2xl font-black">{title}</p>
           <p className="text-sm">{description}</p>
         </div>
