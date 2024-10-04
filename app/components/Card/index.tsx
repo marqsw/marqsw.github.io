@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+
 export default function Card({
   title,
   subtitle,
@@ -30,7 +31,7 @@ export default function Card({
 
         {label && (
           <div className="flex flex-col items-end">
-            <div className="m-3 rounded-lg border-2 border-gray-800 bg-slate-800 px-2 py-1 opacity-75">
+            <div className="m-3 rounded-xl  p-2 border-2 border-opacity-20 border-gray-800 backdrop-blur-3xl">
               <p className="text-xs">{label}</p>
             </div>
           </div>

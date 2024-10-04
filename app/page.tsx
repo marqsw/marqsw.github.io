@@ -1,27 +1,29 @@
 import Avatar from "./components/Avatar";
 import LinkButton from "./components/LinkButton";
 import Card from "./components/Card";
+import SectionTitle from "./components/SectionTitle";
+import CardGrod from "./components/CardGrid";
 
 // projects in reverse chronological order
 const projects = [
   {
     title: "AI Chess Engine",
     subtitle: "PyTorch",
-    label: '2023',
+    label: 'July 2024',
     description:
       "An intelligent, neural network based AI that masters any board games autonomously without any human assistance",
     imagePath: "/home/chess-engine-cover.png",
-    link: "/programming/ai-chess-engine",
+    link: "https://github.com/marqsw/AI-Chess-Engine",
   },
 
   {
     title: "Portfolio Website",
     subtitle: 'React',
-    label: '2024',
+    label: 'October 2024',
     description:
       "An elegant and responsive website to organises and introduces some projects of mine",
     imagePath: "/home/portfolio-website-cover.png",
-    link: "/programming/portfolio-webesite",
+    link: "https://marqsw.github.io/",
   },
 
   {
@@ -62,6 +64,9 @@ const contacts = [
 ];
 
 export default function Home() {
+
+
+
   return (
     <div className="grid grid-cols-1 justify-items-center gap-10">
       <div className="w-52">
@@ -81,17 +86,16 @@ export default function Home() {
         })}
       </div>
 
-      <p className="w-full text-3xl font-black">Recent Projects</p>
+      <SectionTitle>Who Am I?</SectionTitle>
+        
 
-      <div className="flex flex-wrap justify-center gap-5">
-        {projects.map((project) => {
-          return (
-            <div key={project.title}>
-              <Card {...project} />
-            </div>
-          );
-        })}
-      </div>
+
+      <SectionTitle>Recent Projects</SectionTitle>
+      <CardGrod cardProps={projects}></CardGrod>
+
+
+      
+
     </div>
 
   );
