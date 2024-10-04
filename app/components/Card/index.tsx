@@ -31,7 +31,7 @@ export default function Card({
 
         {label && (
           <div className="flex flex-col items-end">
-            <div className="m-3 rounded-xl  p-2 border-2 border-opacity-20 border-gray-800 backdrop-blur-3xl">
+            <div className="m-3 rounded-xl  p-2  backdrop-blur-3xl">
               <p className="text-xs">{label}</p>
             </div>
           </div>

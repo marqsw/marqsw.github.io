@@ -1,6 +1,5 @@
 import Avatar from "./components/Avatar";
 import LinkButton from "./components/LinkButton";
-import Card from "./components/Card";
 import SectionTitle from "./components/SectionTitle";
 import CardGrod from "./components/CardGrid";
 
