@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-
 export default function Card({
   title,
   subtitle,
@@ -22,21 +21,23 @@ export default function Card({
         <Image className="blur-3xl" src={imagePath || ""} alt="" fill={true} />
       </a>
 
+      {/* Background Image */}
       <div
         className={`pointer-events-none relative flex h-96 w-72 flex-col justify-end self-center rounded-3xl border-2 border-gray-800 bg-cover bg-center text-white`}
         style={{
           backgroundImage: `url(${imagePath})`,
         }}
       >
-
+        {/* Top-Right Label */}
         {label && (
           <div className="flex flex-col items-end">
-            <div className="m-3 rounded-xl  p-2  backdrop-blur-3xl">
+            <div className="m-3 rounded-xl p-2 backdrop-blur-3xl">
               <p className="text-xs">{label}</p>
             </div>
           </div>
         )}
 
+        {/* Gradient Blur and Text */}
         <div
           className="flex h-full w-full flex-col justify-end rounded-3xl p-5 text-left"
           style={{

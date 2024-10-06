@@ -3,5 +3,5 @@ export default function SectionParagraph({
 }: {
   children: React.ReactNode;
 }) {
-  return <p className="text-left">{children}</p>;
+  return <p className="w-full text-left">{children}</p>;
 }

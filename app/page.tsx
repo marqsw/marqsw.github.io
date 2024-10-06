@@ -12,7 +12,7 @@ const projects = [
     description:
       "An intelligent, neural network based AI that masters any board games autonomously without any human assistance",
     imagePath: "/home/chess-engine-cover.png",
-    link: "https://github.com/marqsw/AI-Chess-Engine",
+    link: "/programming/ai-chess-engine",
   },
 
   {
