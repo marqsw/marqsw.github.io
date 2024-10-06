@@ -7,7 +7,7 @@ import SectionTitle from "@/app/components/Section/SectionTitle";
 export default function Page() {
   return (
     <div className="flex flex-col items-center gap-10">
-      <ImageBanner imagePath="/programming/chess-engine-banner.png" />
+      <ImageBanner imagePath="/programming/ai-chess-engine/chess-engine-banner.png" />
 
       <LinkButton link="https://github.com/marqsw/AI-Chess-Engine">
         <div className="flex gap-5">
@@ -50,7 +50,7 @@ export default function Page() {
           test with the game of chess.
         </SectionParagraph>
       </Section>
-      <ImageBanner imagePath="/programming/ui.png" />
+      <ImageBanner imagePath="/programming/ai-chess-engine/ui.png" />
       <Section>
         <SectionParagraph>
           Integrated with PyTorch, it has been designed as a complete kit for
