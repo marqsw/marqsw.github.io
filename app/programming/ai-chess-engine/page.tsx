@@ -56,11 +56,18 @@ export default function Page() {
           Integrated with PyTorch, it has been designed as a complete kit for
           training, running, and customising the AI. It includes a self-training
           script to create a model and trains it through reinforcement learning,
-          an demo to launch and run the AI, and a customisable UI framework
+          a demo to launch and run the AI, and a customisable UI framework
           designed and developed for this project. This framework allows
           developers to easily create new pages and add functions.
         </SectionParagraph>
       </Section>
+
+      <LinkButton link="https://github.com/marqsw/AI-Chess-Engine">
+        <div className="flex gap-5">
+          <img className="h-7" src="/home/github-logo.png" />
+          <SectionParagraph>View on GitHub</SectionParagraph>
+        </div>
+      </LinkButton>
     </div>
   );
 }
