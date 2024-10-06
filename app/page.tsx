@@ -1,14 +1,14 @@
 import Avatar from "./components/Avatar";
 import LinkButton from "./components/LinkButton";
-import SectionTitle from "./components/SectionTitle";
-import CardGrod from "./components/CardGrid";
+import SectionTitle from "./components/Section/SectionTitle";
+import CardGrid from "./components/CardGrid";
 
 // projects in reverse chronological order
 const projects = [
   {
     title: "AI Chess Engine",
     subtitle: "PyTorch",
-    label: 'July 2024',
+    label: "July 2024",
     description:
       "An intelligent, neural network based AI that masters any board games autonomously without any human assistance",
     imagePath: "/home/chess-engine-cover.png",
@@ -17,8 +17,8 @@ const projects = [
 
   {
     title: "Portfolio Website",
-    subtitle: 'React',
-    label: 'October 2024',
+    subtitle: "React",
+    label: "October 2024",
     description:
       "An elegant and responsive website to organises and introduces some projects of mine",
     imagePath: "/home/portfolio-website-cover.png",
@@ -37,11 +37,9 @@ const projects = [
     title: "MultiCam",
     subtitle: "React Native",
     label: "Upcoming...",
-    description: "A mobile camera app with intuitive and advanced controls for daily and professional use",
+    description:
+      "A mobile camera app with intuitive and advanced controls for daily and professional use",
   },
-
-
-
 ].reverse();
 
 const contacts = [
@@ -63,9 +61,6 @@ const contacts = [
 ];
 
 export default function Home() {
-
-
-
   return (
     <div className="grid grid-cols-1 justify-items-center gap-10">
       <div className="w-52">
@@ -86,16 +81,9 @@ export default function Home() {
       </div>
 
       {/* <SectionTitle>Who Am I?</SectionTitle> */}
-        
-
 
       <SectionTitle>Recent Projects</SectionTitle>
-      <CardGrod cardProps={projects}></CardGrod>
-
-
-      
-
+      <CardGrid cardProps={projects}></CardGrid>
     </div>
-
   );
 }

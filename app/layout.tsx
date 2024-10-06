@@ -30,8 +30,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="flex flex-col items-center">
-          <Header></Header>
-          <div className="grid p-10 max-w-screen-lg">{children}</div>
+          <Header/>
+          <div className="grid p-10 max-w-screen-md">{children}</div>
         </div>
       </body>
     </html>
