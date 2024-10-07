@@ -13,7 +13,7 @@ const projects = [
     subtitle: "PyTorch",
     label: "July 2024",
     description:
-      "An intelligent, neural network based AI that masters any board games autonomously without any human assistance",
+      "An intelligent, neural network-based AI that masters any board games autonomously without any human assistance",
     imagePath: "/home/chess-engine-cover.png",
     link: "/programming/ai-chess-engine",
   },
@@ -33,7 +33,7 @@ const projects = [
     subtitle: "React Native",
     label: "Coming in late October",
     description:
-      "A beautiful, cross-platform app that turns your phone into a measuring tool, make use of the amazing technologies embeded in a phone",
+      "A beautiful, cross-platform app that make use of the amazing technologies embedded in a phone and turns it into a measuring tool",
   },
 
   {
@@ -97,10 +97,10 @@ export default function Home() {
         <SectionParagraph>
           I am a tech enthusiast who continuously challenge myself to solve
           problems and create better work. This is why optimising code and
-          building user interface is my favourite part of the job. As a
-          mechanical engineer student at the same time, I also like exploring new things and
-          learn how they work. I never get tired of building things and excel in
-          problem-solving and lateral thinking.
+          building user interface is my favourite part of programming. As a
+          mechanical engineer student at the same time, I also like exploring
+          new things and learn how they work. I never get tired of building
+          things and excel in problem-solving and lateral thinking.
         </SectionParagraph>
       </Section>
 
