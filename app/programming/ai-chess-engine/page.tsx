@@ -18,7 +18,7 @@ export default function Page() {
 
       <Section>
         <SectionParagraph>
-          In 1997, the world witnessed a computer beats a reigning chess
+          In 1997, the world witnessed a computer defeats a reigning chess
           champion for the first time – The Deep Blue’s groundbreaking victory
           against the Russian grandmaster Garry Kasparov, marking the milestone
           for chess engines and AI.
@@ -28,8 +28,8 @@ export default function Page() {
           And in 2015, Google’s DeepMind’s AlphaGo marks another milestone,
           beating a Go world champion a decade before experts thought possible,
           in a match against European Champion, Fan Hui. Unlike traditional
-          chess engines that relied on hardcoded heuristic, this engine used two
-          neural networks to predict and evaluate moves, demonstrating the
+          chess engines that relied on hardcoded heuristics, this engine used
+          two neural networks to predict and evaluate moves, demonstrating the
           effectiveness of neural networks.
         </SectionParagraph>
 
@@ -55,10 +55,11 @@ export default function Page() {
         <SectionParagraph>
           Integrated with PyTorch, it has been designed as a complete kit for
           training, running, and customising the AI. It includes a self-training
-          script to create a model and trains it through reinforcement learning,
-          a demo to launch and run the AI, and a customisable UI framework
-          designed and developed for this project. This framework allows
-          developers to easily create new pages and add functions.
+          script to create a model and repeatedly trains it through
+          reinforcement learning, a demo to launch and run the AI, and a
+          customisable UI framework specially designed and developed for this
+          project. This UI framework allows developers to easily create new
+          pages and add functions.
         </SectionParagraph>
       </Section>
 

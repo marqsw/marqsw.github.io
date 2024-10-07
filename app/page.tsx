@@ -75,7 +75,7 @@ export default function Home() {
             <SectionHeading>Hi, I am</SectionHeading>
             <SectionTitle>Marquis</SectionTitle>
           </div>
-          <p>I am a full stack developer and a mechaincal engineer student</p>
+          <p>I am a full stack developer and a mechaincal engineering student at UCL</p>
         </div>
       </div>
 
@@ -98,7 +98,7 @@ export default function Home() {
           I am a tech enthusiast who continuously challenge myself to solve
           problems and create better work. This is why optimising code and
           building user interface is my favourite part of programming. As a
-          mechanical engineer student at the same time, I also like exploring
+          mechanical engineering student at the same time, I also like exploring
           new things and learn how they work. I never get tired of building
           things and excel in problem-solving and lateral thinking.
         </SectionParagraph>
