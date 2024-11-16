@@ -1,3 +1,18 @@
-export default function Section({ children }: { children: React.ReactNode }) {
-  return <div className="flex w-full flex-col gap-5">{children}</div>;
+import React, { createContext, useContext } from "react";
+
+type Props = {
+  children: React.ReactNode;
+};
+
+export const LevelContext = createContext(-1);
+
+export default function Section({ children }: Props) {
+  const level = useContext(LevelContext);
+  return (
+    <section className="">
+      <LevelContext.Provider value={level + 1}>
+        {children}
+      </LevelContext.Provider>
+    </section>
+  );
 }
