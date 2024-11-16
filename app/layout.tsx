@@ -31,7 +31,7 @@ export default function RootLayout({
       >
         <div className="flex flex-col items-center">
           <Header />
-          <div className="grid max-w-screen-md p-10">{children}</div>
+          <div className="grid max-w-screen-md px-10 pb-10">{children}</div>
         </div>
       </body>
     </html>

@@ -32,9 +32,11 @@ const projects = [
   {
     title: "Sensors",
     subtitle: "React Native",
-    label: "Coming in late October",
+    label: "November 2024",
     description:
       "A beautiful, cross-platform app that make use of the amazing technologies embedded in a phone and turns it into a measuring tool",
+      imagePath: "/home/sensors-cover.gif",
+      link: "/programming/sensors"
   },
 
   {

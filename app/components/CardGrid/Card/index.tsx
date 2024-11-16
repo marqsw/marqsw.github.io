@@ -23,7 +23,7 @@ export default function Card({
 
       {/* Background Image */}
       <div
-        className={`pointer-events-none relative flex h-96 w-72 flex-col justify-end self-center rounded-3xl border-2 border-gray-800 bg-cover bg-center text-white`}
+        className={`pointer-events-none relative flex h-96 w-72 flex-col justify-end self-center rounded-3xl border-2 border-gray-900 bg-cover bg-center text-white`}
         style={{
           backgroundImage: `url(${imagePath})`,
         }}

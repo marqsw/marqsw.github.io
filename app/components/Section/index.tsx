@@ -9,7 +9,7 @@ export const LevelContext = createContext(-1);
 export default function Section({ children }: Props) {
   const level = useContext(LevelContext);
   return (
-    <section className="">
+    <section className="w-full">
       <LevelContext.Provider value={level + 1}>
         {children}
       </LevelContext.Provider>

@@ -18,7 +18,7 @@ export default function Header() {
       }}
     >
       <div
-        className="mx-10 flex w-full items-center justify-center"
+        className="mx-10 flex w-full items-center justify-center h-full"
         style={{
           height: `${100 - softEdgePerecentage}%`,
         }}
