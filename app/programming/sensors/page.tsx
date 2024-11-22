@@ -15,6 +15,7 @@ export default function Page() {
         <Paragraph>Visualise and Record Live Data</Paragraph>
       </div>
       <ImageBanner imagePath="/home/sensors-cover.gif" />
+      
       <LinkButton link="https://github.com/marqsw/Sensors">
         <div className="flex gap-5">
           <img className="h-7" src="/home/github-logo.png" />
@@ -31,7 +32,7 @@ export default function Page() {
           accessible in any user-friendly sense. This is why I have set out to
           create an app, that is easy on eye and user friendly, to instantly
           visualise data and record it for analysis.
-`}{" "}
+`}
         </Paragraph>
         <Heading>A simple and intuitive interface</Heading>
         <Section>
@@ -45,7 +46,7 @@ export default function Page() {
             textures, and minimalism. The result is a minimal, calm and quiet
             interface, eliminating any distractions and neutralising the busy
             live data.
-`}{" "}
+`}
           </Paragraph>
 
           <Heading>Sensor Cards</Heading>
@@ -54,7 +55,7 @@ export default function Page() {
             {`            The sensors and their data are grouped into cards, tapping on it
             would reveal their descriptions, allow viewing and selecting to be
             easily done.
-`}{" "}
+`}
           </Paragraph>
 
           <Heading>Control Panel</Heading>
@@ -67,7 +68,7 @@ export default function Page() {
             button when selecting sensors for recording, expanding again to
             record the video, simplifying workflow and further simplifying the
             user interface.
-`}{" "}
+`}
           </Paragraph>
         </Section>
         <Heading>Installation</Heading>
@@ -75,11 +76,11 @@ export default function Page() {
           {`          Pre-compiled APK downloads are available for Android. iOS users may
           need to compile the app themselves as distributing the app as IPA
           format would require a paid subscription to Apple Developer Program.
-`}{" "}
+`}
         </Paragraph>
       </Section>
 
-      <LinkButton link="https://github.com/marqsw/Sensors/releases/tag/v1.0.0">
+      <LinkButton link="https://github.com/marqsw/Sensors/releases">
         <div className="flex gap-5">
           <img className="h-7" src="/programming/sensors/android-head-3D.svg" />
           <p>Download for Android</p>
