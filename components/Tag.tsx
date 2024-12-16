@@ -6,21 +6,27 @@ type TagProps = {
   children: React.ReactNode;
 };
 
-export default function Tag({ tint, url, children }: TagProps) {
-  console.log(tint ? "bg-" + tint : "");
-
+export default function Tag({ tint = "#fff", url, children }: TagProps) {
   return (
-    <Link
-      href={url}
-      className={
-        "flex backdrop-blur py-2 px-4 rounded-full w-min flex-nowrap gap-2 items-center"
-      }
-      style={{
-        borderTop: "0.5px solid rgba(211, 211, 211, 0.75)",
-        borderBottom: "0.5px solid rgba(169, 169, 169, 0.75)",
-      }}
-    >
-      {children}
-    </Link>
+    <div className="relative">
+      <Link
+        href={url}
+        className="absolute h-full w-full rounded-full opacity-0 blur-md transition-all duration-300 hover:opacity-20"
+        style={{
+          backgroundColor: tint,
+        }}
+      />
+      <div
+        className={
+          "pointer-events-none relative flex w-min flex-nowrap items-center gap-2 rounded-full px-4 py-2 backdrop-blur"
+        }
+        style={{
+          borderTop: "0.5px solid rgba(211, 211, 211, 0.75)",
+          borderBottom: "0.5px solid rgba(169, 169, 169, 0.75)",
+        }}
+      >
+        {children}
+      </div>
+    </div>
   );
 }

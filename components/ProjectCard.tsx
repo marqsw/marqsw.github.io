@@ -14,22 +14,23 @@ export type ProjectCardProps = {
 
 export default function ProjectCard(project: ProjectCardProps) {
   return (
-    <div className="flex flex-col gap-2">
-      <h1 className="font-black">{project.name}</h1>
-
-      <div className="flex gap-2">
-        {project.techStack.map((techStack: TechStack) => (
-          <TechStackTag
-            key={techStack}
-            techStack={techStack}
-            nameVisible={true}
-          />
-        ))}
-      </div>
-      <div className="flex gap-2">
-        {project.availablePlatforms.map((platform: UserPlatform) => (
-          <PlatformTag key={platform} platform={platform} nameVisible={false} />
-        ))}
+    <div>
+      <div className="flex flex-col gap-2">
+        <h1 className="font-black">{project.name}</h1>
+        <div className="flex gap-2">
+          {project.techStack.map((techStack: TechStack) => (
+            <TechStackTag key={techStack} techStack={techStack} />
+          ))}
+        </div>
+        <div className="flex gap-2">
+          {project.availablePlatforms.map((platform: UserPlatform) => (
+            <PlatformTag
+              key={platform}
+              platform={platform}
+              nameVisible={false}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
