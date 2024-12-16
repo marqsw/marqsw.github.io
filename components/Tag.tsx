@@ -13,7 +13,7 @@ export default function Tag({ tint, url, children }: TagProps) {
     <Link
       href={url}
       className={
-        "flex backdrop-blur py-1 px-3 rounded-full w-min flex-nowrap gap-2 items-center"
+        "flex backdrop-blur py-2 px-4 rounded-full w-min flex-nowrap gap-2 items-center"
       }
       style={{
         borderTop: "0.5px solid rgba(211, 211, 211, 0.75)",

@@ -1,8 +1,8 @@
-import { ContactIconProps } from "@/components/ContactIcon";
+import { ContactTagProps } from "@/components/ContactTag";
 import { ProjectCardProps } from "@/components/ProjectCard";
 
 export type IndexData = {
-  contacts: ContactIconProps[];
+  contacts: ContactTagProps[];
   projects: ProjectCardProps[];
 };
 

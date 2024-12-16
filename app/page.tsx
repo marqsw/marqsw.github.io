@@ -1,6 +1,6 @@
 "use client";
 
-import ContactIcon, { ContactIconProps } from "@/components/ContactIcon";
+import ContactTag, { ContactTagProps } from "@/components/ContactTag";
 import ProjectCard, { ProjectCardProps } from "@/components/ProjectCard";
 import { indexData } from "./home-data";
 
@@ -12,8 +12,8 @@ export default function Home() {
       }}
     >
       <div className="flex justify-center gap-2">
-        {indexData.contacts.map((contact: ContactIconProps) => (
-          <ContactIcon key={contact.platform} {...contact} />
+        {indexData.contacts.map((contact: ContactTagProps) => (
+          <ContactTag key={contact.platform} {...contact} />
         ))}
       </div>
 

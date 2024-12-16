@@ -66,8 +66,8 @@ export default function TechStackTag({
 
   return (
     <Tag url={url}>
-      {iconVisible && <Icon className="w-5" />}
-      {nameVisible && <p className="text-nowrap text-xs">{name}</p>}
+      {iconVisible && <Icon className="" />}
+      {nameVisible && <p className="text-nowrap text-sm">{name}</p>}
     </Tag>
   );
 }
