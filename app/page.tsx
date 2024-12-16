@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div
       style={{
-        backgroundImage: `url("test-background-2.jpg")`,
+        backgroundImage: `url("backdrop.jpg")`,
       }}
     >
       <div className="flex justify-center gap-2">

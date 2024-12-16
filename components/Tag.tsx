@@ -6,12 +6,12 @@ type TagProps = {
   children: React.ReactNode;
 };
 
-export default function Tag({ tint = "#fff", url, children }: TagProps) {
+export default function Tag({ tint = "#808080", url, children }: TagProps) {
   return (
     <div className="relative">
       <Link
         href={url}
-        className="absolute h-full w-full rounded-full opacity-0 blur-md transition-all duration-300 hover:opacity-20"
+        className="absolute h-full w-full rounded-full opacity-0 blur-lg transition-all duration-200 ease-out hover:opacity-30"
         style={{
           backgroundColor: tint,
         }}
