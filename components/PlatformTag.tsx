@@ -97,7 +97,7 @@ export default function PlatformTag({
   const colour = platformNameAndIcon[platform].colour;
   return (
     <Tag url={url} tint={colour}>
-      {iconVisible && <Icon />}
+      {iconVisible && <Icon className="w-5" />}
       {nameVisible && <p className="text-nowrap text-sm">{name}</p>}
     </Tag>
   );

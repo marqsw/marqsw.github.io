@@ -1,4 +1,5 @@
 import PlatformTag, { UserPlatform } from "./PlatformTag";
+import Tag from "./Tag";
 import TechStackTag, { TechStack } from "./TechStackTag";
 
 export type ProjectCardProps = {
@@ -16,7 +17,7 @@ export type ProjectCardProps = {
 export default function ProjectCard(project: ProjectCardProps) {
   return (
     <div
-      className="relative flex aspect-video h-72 overflow-hidden rounded-3xl bg-cover bg-center"
+      className="relative flex aspect-square h-96 overflow-hidden rounded-3xl bg-cover bg-center"
       style={{
         borderTop: "0.5px solid rgba(211, 211, 211, 0.75)",
         borderBottom: "0.5px solid rgba(169, 169, 169, 0.75)",
@@ -35,19 +36,29 @@ export default function ProjectCard(project: ProjectCardProps) {
       />
 
       <div className="flex h-full w-full flex-col justify-between gap-2 p-7">
-        <div className="flex gap-2">
-          {project.availablePlatforms.map((platform: UserPlatform) => (
-            <PlatformTag
-              key={platform}
-              platform={platform}
-              nameVisible={false}
-            />
-          ))}
+        <div className="flex justify-end">
+          <Tag url="">
+            <p className="text-nowrap text-sm">
+              {project.date
+                ? `${project.date > new Date() ? "Coming in " : ""}${project.date.toLocaleDateString("en-GB", { year: "numeric", month: "short" })}${project.date > new Date() ? "..." : ""}`
+                : "Upcoming..."}
+            </p>
+          </Tag>
         </div>
 
         <div className="flex flex-col gap-2">
-          <p className="text-3xl font-black opacity-85">{project.name}</p>
-          <p className="text font-extrabold opacity-70">
+          <div className="flex gap-2">
+            {project.availablePlatforms.map((platform: UserPlatform) => (
+              <PlatformTag
+                key={platform}
+                platform={platform}
+                nameVisible={false}
+              />
+            ))}
+          </div>
+
+          <p className="text-3xl font-black">{project.name}</p>
+          <p className="text font-extrabold text-gray-300">
             {project.description}
           </p>
           <div className="flex gap-2">

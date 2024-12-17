@@ -26,19 +26,19 @@ export const indexData: IndexData = {
     {
       name: "AI Chess Engine",
       handle: "ai-chess-engine",
-      date: new Date("7-2024"),
-      description: "Master Every Board Game",
+      date: new Date(2024, 6),
+      description: "Master Any Board Game",
       techStack: ["python"],
       thumbnail: "",
       projectUrl: "https://github.com/marqsw/AI-Chess-Engine",
       availablePlatforms: ["windows", "macos", "linux"],
-      coverImage: 'ai-chess-engine-cover.png'
+      coverImage: "ai-chess-engine-cover.png",
     },
 
     {
       name: "Portfolio Website",
       handle: "portfolio-website",
-      date: new Date("10-2024"),
+      date: new Date(2024, 9),
       description: "A Warm and Cozy Home for the Projects",
       techStack: ["typescript", "react"],
       thumbnail: "",
@@ -49,7 +49,7 @@ export const indexData: IndexData = {
     {
       name: "Sensors",
       handle: "sensor-app",
-      date: new Date("11-24"),
+      date: new Date(2024, 10),
       description: "Visualise and Record Live Data",
       techStack: ["typescript", "react-native"],
       thumbnail: "",
@@ -60,7 +60,7 @@ export const indexData: IndexData = {
     {
       name: "MultiCam",
       handle: "multicam-app",
-      date: undefined,
+      date: new Date(2024, 12),
       description: "The Power of a Studio, in the Palm of Your Hands",
       techStack: ["swift"],
       thumbnail: "",

@@ -2,20 +2,22 @@ import Link from "next/link";
 
 type TagProps = {
   tint?: string;
-  url: string;
+  url?: string;
   children: React.ReactNode;
 };
 
 export default function Tag({ tint = "#808080", url, children }: TagProps) {
   return (
     <div className="relative">
-      <Link
-        href={url}
-        className="absolute h-full w-full rounded-full opacity-15 transition-all duration-300 ease-out hover:opacity-40 hover:blur"
-        style={{
-          backgroundColor: tint,
-        }}
-      />
+      {url && (
+        <Link
+          href={url}
+          className="absolute flex h-full w-full rounded-full opacity-15 transition-all duration-300 ease-out hover:opacity-40 hover:blur"
+          style={{
+            backgroundColor: tint,
+          }}
+        />
+      )}
       <div
         className={
           "pointer-events-none relative flex w-min flex-nowrap items-center gap-2 rounded-full px-4 py-2 backdrop-blur"
