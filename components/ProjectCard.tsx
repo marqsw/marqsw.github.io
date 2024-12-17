@@ -26,7 +26,7 @@ export default function ProjectCard(project: ProjectCardProps) {
       <div
         className="absolute h-full w-full"
         style={{
-          backdropFilter: "blur(10px) saturate(1.1) brightness(1.1)",
+          // backdropFilter: "blur(10px) saturate(1.1) brightness(1.1)",
           maskImage:
             "linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 85%)",
           WebkitMaskImage:
