@@ -11,7 +11,7 @@ export default function Tag({ tint = "#808080", url, children }: TagProps) {
     <div className="relative">
       <Link
         href={url}
-        className="absolute h-full w-full rounded-full opacity-15 transition-all duration-300 ease-out hover:opacity-25 hover:blur"
+        className="absolute h-full w-full rounded-full opacity-15 transition-all duration-300 ease-out hover:opacity-40 hover:blur"
         style={{
           backgroundColor: tint,
         }}
