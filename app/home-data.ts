@@ -32,6 +32,7 @@ export const indexData: IndexData = {
       thumbnail: "",
       projectUrl: "https://github.com/marqsw/AI-Chess-Engine",
       availablePlatforms: ["windows", "macos", "linux"],
+      coverImage: 'ai-chess-engine-cover.png'
     },
 
     {
