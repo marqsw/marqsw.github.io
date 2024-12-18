@@ -21,7 +21,7 @@ export default function ProjectCard(project: ProjectCardProps) {
 
   return (
     <button
-      className="relative aspect-square h-96 skew-x-3 overflow-hidden rounded-3xl bg-cover bg-center text-left transition-all duration-500 ease-out hover:-translate-y-1/3 hover:skew-x-0 hover:scale-105 focus:-translate-y-full focus:skew-x-0 focus:scale-125 active:scale-100"
+      className="relative aspect-square h-96 skew-x-3 overflow-hidden rounded-3xl bg-cover bg-center text-left transition-all duration-300 ease-out hover:-translate-y-1/3 hover:skew-x-0 hover:scale-105 focus:-translate-y-full focus:skew-x-0 focus:scale-125 active:scale-110"
       onClick={() => setFocused((prev) => !prev)}
       style={{
         pointerEvents: "fill",
