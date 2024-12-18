@@ -20,9 +20,9 @@ export default function ProjectCard(project: ProjectCardProps) {
   const [focused, setFocused] = useState(false);
 
   return (
-    <button
-      className="relative aspect-square h-96 skew-x-3 overflow-hidden rounded-3xl bg-cover bg-center text-left transition-all duration-300 ease-out hover:-translate-y-1/3 hover:skew-x-0 hover:scale-105 focus:-translate-y-full focus:skew-x-0 focus:scale-125 active:scale-110"
-      onClick={() => setFocused((prev) => !prev)}
+    <div
+      className="relative aspect-square h-96 overflow-hidden rounded-3xl bg-cover bg-center text-left"
+      // onClick={() => setFocused((prev) => !prev)}
       style={{
         pointerEvents: "fill",
         borderTop: "0.5px solid rgba(211, 211, 211, 0.75)",
@@ -46,7 +46,7 @@ export default function ProjectCard(project: ProjectCardProps) {
         <div className="pointer-events-none absolute h-full w-full backdrop-blur-2xl" />
       )}
       <div
-        className="z-10 flex h-full w-full flex-col justify-between gap-2 p-7"
+        className="flex h-full w-full flex-col justify-between gap-2 p-7"
         // style={{
         //   pointerEvents: focused ? "all" : "none",
         // }}
@@ -85,6 +85,6 @@ export default function ProjectCard(project: ProjectCardProps) {
           ))}
         </div>
       </div>
-    </button>
+    </div>
   );
 }

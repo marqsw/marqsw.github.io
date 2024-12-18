@@ -19,13 +19,13 @@ export default function Home() {
 
       <div className="relative flex overflow-scroll border-2 border-red-500 p-10">
         {indexData.projects.map((project: ProjectCardProps, index: number) => (
-          <div
+          <button
             key={project.handle}
-            className="fixed"
-            style={{ left: `${10 * index}%`, top: `${10 * index}%` }}
+            className="fixed skew-x-3 transition-all duration-300 ease-out hover:-translate-y-1/3 hover:skew-x-0 hover:scale-105 focus:-translate-y-full focus:skew-x-0 focus:scale-125 active:scale-110"
+            style={{ left: `${10 * index}%`, top: `${2 * index}%` }}
           >
             <ProjectCard {...project} />
-          </div>
+          </button>
         ))}
       </div>
     </div>
