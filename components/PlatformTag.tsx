@@ -11,6 +11,7 @@ import {
   IconDeviceDesktop,
 } from "@tabler/icons-react";
 import Tag from "./Tag";
+import { useState } from "react";
 
 export type UserPlatform =
   | "windows"
@@ -40,7 +41,7 @@ const platformNameAndIcon = {
     name: "macOS",
     icon: IconBrandFinder,
     url: "https://www.apple.com/macos/",
-    colour: "#5990ed",
+    colour: "#4c71e5",
   },
   linux: {
     name: "Linux",

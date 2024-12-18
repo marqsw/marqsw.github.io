@@ -44,6 +44,7 @@ export const indexData: IndexData = {
       thumbnail: "",
       projectUrl: "https://github.com/marqsw/marqsw.github.io",
       availablePlatforms: ["chrome", "edge", "firefox", "safari"],
+      coverImage: "portfolio-website-cover.png",
     },
 
     {
