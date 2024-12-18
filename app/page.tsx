@@ -13,14 +13,16 @@ export default function Home() {
         ))}
       </div>
 
-      <div className="h-96" />
+      <div className="flex h-96 items-center justify-center">
+        <p className="text-3xl font-black">My Projects</p>
+      </div>
 
-      <div className="relative flex overflow-scroll">
+      <div className="relative flex overflow-scroll border-2 border-red-500 p-10">
         {indexData.projects.map((project: ProjectCardProps, index: number) => (
           <div
             key={project.handle}
             className="fixed"
-            style={{ left: `${20 * index}%` }}
+            style={{ left: `${10 * index}%`, top: `${10 * index}%` }}
           >
             <ProjectCard {...project} />
           </div>
