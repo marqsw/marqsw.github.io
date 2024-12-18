@@ -5,11 +5,15 @@ import {
   IconBrandReactNative,
   IconBrandSwift,
   IconBrandTypescript,
+  IconFileTypeCss,
+  IconFileTypeHtml,
 } from "@tabler/icons-react";
 import Tag from "./Tag";
 
 export type TechStack =
   | "python"
+  | "html"
+  | "css"
   | "javascript"
   | "typescript"
   | "swift"
@@ -29,6 +33,21 @@ const techStackNameAndIcon = {
     url: "https://www.python.org/",
     colour: "#f5de70",
   },
+
+  html: {
+    name: "HTML",
+    icon: IconFileTypeHtml,
+    url: "https://developer.mozilla.org/docs/Web/HTML",
+    colour: "#E16E39",
+  },
+
+  css: {
+    name: "CSS",
+    icon: IconFileTypeCss,
+    url: "https://developer.mozilla.org/docs/Web/CSS",
+    colour: "#3764E9",
+  },
+
   javascript: {
     name: "JavaScript",
     icon: IconBrandJavascript,

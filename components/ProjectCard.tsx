@@ -1,6 +1,8 @@
+import Link from "next/link";
 import PlatformTag, { UserPlatform } from "./PlatformTag";
 import Tag from "./Tag";
 import TechStackTag, { TechStack } from "./TechStackTag";
+import { useState } from "react";
 
 export type ProjectCardProps = {
   name: string;
@@ -15,37 +17,40 @@ export type ProjectCardProps = {
 };
 
 export default function ProjectCard(project: ProjectCardProps) {
+  const [focused, setFocused] = useState(false);
+
   return (
-    <div
-      className="relative flex aspect-square h-96 overflow-hidden rounded-3xl bg-cover bg-center"
+    <button
+      className="relative aspect-square h-96 skew-x-3 overflow-hidden rounded-3xl bg-cover bg-center text-left transition-all duration-500 ease-out hover:-translate-y-1/3 hover:skew-x-0 hover:scale-105 focus:-translate-y-full focus:skew-x-0 focus:scale-125 active:scale-100"
+      onClick={() => setFocused((prev) => !prev)}
       style={{
+        pointerEvents: "fill",
         borderTop: "0.5px solid rgba(211, 211, 211, 0.75)",
-        borderBottom: "0.5px solid rgba(169, 169, 169, 0.75)",
+        borderLeft: "0.5px solid rgba(169, 169, 169, 0.75)",
         backgroundImage: `url(${project.coverImage})`,
       }}
+      // disabled={focused}
     >
+      {project.coverImage ? (
+        <div
+          className="pointer-events-none absolute h-full w-full"
+          style={{
+            backdropFilter: "blur(15px) saturate(1.1) brightness(1.1)",
+            maskImage:
+              "linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 60%)",
+            WebkitMaskImage:
+              "linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 60%)",
+          }}
+        />
+      ) : (
+        <div className="pointer-events-none absolute h-full w-full backdrop-blur-2xl" />
+      )}
       <div
-        className="absolute h-full w-full"
-        style={{
-          backdropFilter: "blur(15px) saturate(1.1) brightness(1.1)",
-          maskImage:
-            "linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 70%)",
-          WebkitMaskImage:
-            "linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 70%)",
-        }}
-      />
-
-      <div className="z-10 flex h-full w-full flex-col justify-between gap-2 p-7">
-        <div className="flex flex-wrap gap-2">
-          {project.availablePlatforms.map((platform: UserPlatform) => (
-            <PlatformTag
-              key={platform}
-              platform={platform}
-              nameVisible={false}
-            />
-          ))}
-        </div>
-
+        className="z-10 flex h-full w-full flex-col justify-between gap-2 p-7"
+        // style={{
+        //   pointerEvents: focused ? "all" : "none",
+        // }}
+      >
         <div className="flex flex-col gap-2">
           <Tag url="">
             <p className="text-nowrap text-sm">
@@ -69,7 +74,17 @@ export default function ProjectCard(project: ProjectCardProps) {
             ))}
           </div>
         </div>
+
+        <div className="flex flex-wrap justify-end gap-2">
+          {project.availablePlatforms.map((platform: UserPlatform) => (
+            <PlatformTag
+              key={platform}
+              platform={platform}
+              nameVisible={false}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </button>
   );
 }
