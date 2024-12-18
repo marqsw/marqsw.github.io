@@ -56,6 +56,7 @@ export const indexData: IndexData = {
       thumbnail: "",
       projectUrl: "https://github.com/marqsw/Sensors",
       availablePlatforms: ["ios", "android"],
+      coverImage: "sensors-app-cover.gif",
     },
 
     {

@@ -20,7 +20,7 @@ export default function Tag({ tint = "#808080", url, children }: TagProps) {
       )}
       <div
         className={
-          "pointer-events-none relative flex w-min flex-nowrap items-center gap-2 rounded-full px-4 py-2 backdrop-blur"
+          "pointer-events-none relative flex w-min flex-nowrap items-center gap-2 rounded-full px-4 py-2 shadow backdrop-blur"
         }
         style={{
           borderTop: "0.5px solid rgba(211, 211, 211, 0.75)",
