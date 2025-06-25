@@ -5,6 +5,12 @@
   --foreground: #171717;
 }
 
+
+
+.glassy {
+  @apply border-neutral-200 border-r-neutral-300 border-b-neutral-300 border backdrop-blur-xl dark:border-neutral-700 dark:border-r-neutral-800 dark:border-b-neutral-800 dark:drop-shadow-none dark:bg-black/70 bg-white/70
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
