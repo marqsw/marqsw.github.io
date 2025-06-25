@@ -9,7 +9,7 @@ import {
   TbBrandLinkedin,
   TbMail,
 } from "react-icons/tb";
-import { ScrollDisplacementContext } from "./contexts/ScrollContextProvider";
+import { ScrollDisplacementContext } from "./contexts/ScrollDisplacementContextProvider";
 
 export default function NavBar() {
   const scroll = useContext(ScrollDisplacementContext);
