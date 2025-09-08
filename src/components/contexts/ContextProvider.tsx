@@ -1,4 +1,4 @@
-import ScrollContextProvider from "./contexts/ScrollDisplacementContextProvider";
+import ScrollContextProvider from "./ScrollDisplacementContextProvider";
 
 export default function ContextProvider({
   children,

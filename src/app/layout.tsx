@@ -1,9 +1,18 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import NavBar from "@/components/NavBar";
-import ContextProvider from "@/components/ContextProvider";
+import NavBar, {
+  ExternalNavLinkType,
+  InternalNavLinkType,
+} from "@/components/NavBar";
+import ContextProvider from "@/components/contexts/ContextProvider";
 import React from "react";
+import {
+  TbBrandGithub,
+  TbBrandInstagram,
+  TbBrandLinkedin,
+  TbMail,
+} from "react-icons/tb";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,13 +34,55 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const internalNavLinks: InternalNavLinkType[] = [
+    {
+      name: "Projects",
+      href: "/projects",
+    },
+    {
+      name: "Blogs",
+      href: "/blogs",
+    },
+    {
+      name: "Experience",
+      href: "/experience",
+    },
+  ];
+
+  const externalNavLinks: ExternalNavLinkType[] = [
+    {
+      href: "https://github.com/marqsw",
+      icon: <TbBrandGithub />,
+    },
+    {
+      href: "https://www.linkedin.com/in/marquis-wong-80217b2ba",
+      icon: <TbBrandLinkedin />,
+    },
+    {
+      href: "",
+      icon: <TbBrandInstagram />,
+    },
+    {
+      href: "mailto:marqsw@gmail.com",
+      icon: <TbMail />,
+    },
+  ];
+
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} relative antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} relative flex flex-col antialiased`}
       >
         <ContextProvider>
-          <NavBar />
+          <NavBar
+            internalNavLinks={internalNavLinks}
+            externalNavLinks={externalNavLinks}
+          />
+          <div
+            className={"m-5 my-10 min-h-screen w-screen max-w-3xl self-center"}
+          >
+            {children}
+          </div>
         </ContextProvider>
       </body>
     </html>

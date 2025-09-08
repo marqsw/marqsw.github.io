@@ -4,7 +4,7 @@ import { createContext, useEffect, useRef, useState } from "react";
 
 export const ScrollDisplacementContext = createContext<number>(0);
 
-export default function ScrollContextProvider({
+export default function ScrollDisplacementContextProvider({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   const prevScroll = useRef(0);

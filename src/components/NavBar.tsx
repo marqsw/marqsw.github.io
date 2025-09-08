@@ -2,53 +2,66 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
-import { useContext } from "react";
-import {
-  TbBrandGithub,
-  TbBrandInstagram,
-  TbBrandLinkedin,
-  TbMail,
-} from "react-icons/tb";
+import React, { useContext } from "react";
 import { ScrollDisplacementContext } from "./contexts/ScrollDisplacementContextProvider";
+import { TargetAndTransition } from "motion";
 
-export default function NavBar() {
+export type InternalNavLinkType = {
+  name: string;
+  href: string;
+};
+
+export type ExternalNavLinkType = {
+  href: string;
+  icon: React.ReactNode;
+};
+
+export default function NavBar({
+  internalNavLinks = [],
+  externalNavLinks = [],
+}: Readonly<{
+  internalNavLinks: InternalNavLinkType[];
+  externalNavLinks: ExternalNavLinkType[];
+}>) {
   const scroll = useContext(ScrollDisplacementContext);
+
+  const activeAnimation: TargetAndTransition = { scale: 1 };
+  const inactiveAnimation: TargetAndTransition = {
+    scale: 0.5,
+    translateY: -100,
+    filter: "blur(0.5em)",
+  };
 
   return (
     <motion.div
-      animate={scroll <= 0 ? "active" : "inactive"}
-      variants={{
-        active: { scale: 1 },
-        inactive: { scale: 0.5, translateY: -100 },
-      }}
-      transition={{ type: "spring", damping: 13, stiffness: 200 }}
-      className={`${"blur-2xl"}} glassy sticky top-5 z-50 m-5 grid grid-flow-col grid-cols-3 flex-row items-center rounded-xl p-5 drop-shadow-2xl duration-400 ease-out`}
+      // animate={scroll <= 0 ? "active" : "inactive"}
+      // variants={{
+      //   active: activeAnimation,
+      //   inactive: inactiveAnimation,
+      // }}
+      // transition={{ type: "spring", damping: 13, stiffness: 160 }}
+      className={`${scroll > 0 && "blur-2xl"}} glassy sticky top-5 z-50 m-5 grid grid-flow-col grid-cols-3 flex-row items-center rounded-xl p-5 drop-shadow-xl duration-400 ease-out`}
     >
       <div className="flex items-center gap-5">
         <Link className="flex gap-5 text-xl font-black" href={"/"}>
           Marquis
         </Link>
       </div>
+
       <div className="flex justify-center gap-10">
-        <Link href={"/projects"}>Projects</Link>
-        <Link href={"/blogs"}>Blogs</Link>
-        <Link href={"/experience"}>Experience</Link>
+        {internalNavLinks.map(({ name, href }) => (
+          <Link key={name} href={href}>
+            {name}
+          </Link>
+        ))}
       </div>
 
       <div className="flex items-center justify-end gap-5">
-        <Link href={"https://github.com/marqsw/"}>
-          <TbBrandGithub />
-        </Link>
-        <Link href={"https://www.linkedin.com/in/marquis-wong-80217b2ba"}>
-          <TbBrandLinkedin />
-        </Link>
-        <Link href={""}>
-          <TbBrandInstagram />
-        </Link>
-
-        <Link href={"mail:marqsw@gmail.com"}>
-          <TbMail />
-        </Link>
+        {externalNavLinks.map(({ href, icon }) => (
+          <Link key={href} target={"_blank"} href={href}>
+            {icon}
+          </Link>
+        ))}
       </div>
     </motion.div>
   );
