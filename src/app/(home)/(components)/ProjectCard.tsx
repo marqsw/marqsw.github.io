@@ -3,8 +3,9 @@ import React from "react";
 import { IconType } from "react-icons";
 import Tag from "@/components/Tag";
 import Button from "@/components/Button";
-import { TbArrowNarrowRight } from "react-icons/tb";
+import { TbArrowNarrowRight, TbBrandGithub } from "react-icons/tb";
 import clsx from "clsx";
+import Link from "next/link";
 
 export default function ProjectCard({
   date,
@@ -12,12 +13,14 @@ export default function ProjectCard({
   description,
   tag,
   coverSrc,
+  href,
 }: Readonly<{
   date: string;
   title: string;
   description: string;
   tag?: { icon: IconType; name: string };
   coverSrc?: string;
+  href?: string;
 }>) {
   return (
     <VerticalCard
@@ -59,9 +62,14 @@ export default function ProjectCard({
           <h3 className={"text-sm font-black text-neutral-300"}>{date}</h3>
           <h2 className={"text-xl font-black opacity-80"}>{title}</h2>
           <p className={"text-sm opacity-90"}>{description}</p>
-          <Button className={clsx("mt-2", coverSrc && "glassy-neutral")}>
-            Tell me more <TbArrowNarrowRight />
-          </Button>
+          <Link href={href ?? ""} className={"flex w-full"}>
+            <Button
+              className={clsx("mt-2 flex w-full", coverSrc && "glassy-neutral")}
+            >
+              <TbBrandGithub /> See the code
+              <TbArrowNarrowRight />
+            </Button>
+          </Link>
         </div>
       </div>
     </VerticalCard>

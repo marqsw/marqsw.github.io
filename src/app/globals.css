@@ -24,6 +24,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+@utility glassy-warning {
+    @apply border-t border-b backdrop-blur-xl border-t-orange-300/60 border-b-orange-300/15 bg-linear-to-br from-orange-800/10 to-orange-800/0 transition-all duration-700 ease-out;
+}
+
+
 @utility glassy {
     @apply border-t border-b backdrop-blur-xl border-t-indigo-300/60 border-b-indigo-300/15 bg-linear-to-br from-indigo-800/10 to-indigo-800/0 transition-all duration-700 ease-out;
 }

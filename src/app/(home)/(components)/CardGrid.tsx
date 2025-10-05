@@ -4,12 +4,13 @@ import { SiPytorch } from "react-icons/si";
 
 export default function CardGrid() {
   return (
-    <div className={"grid w-full grid-cols-3 gap-5"}>
+    <div className={"grid w-full grid-cols-2 gap-5 md:grid-cols-3"}>
       <ProjectCard
-        date={"September 2025"}
+        date={"In progress..."}
         title={"Portfolio website v2"}
         description={"Learned a lot since then, time to revamp the website"}
         tag={{ icon: TbBrandNextjs, name: "Next.js" }}
+        href={"https://marqsw.github.io/"}
       />
       <ProjectCard
         date={"November 2024"}
@@ -17,12 +18,14 @@ export default function CardGrid() {
         description={"A sensor app with neumorphic design"}
         tag={{ icon: TbBrandReactNative, name: "React Native" }}
         coverSrc={"/home/sensors-cover.png"}
+        href={"https://github.com/marqsw/Sensors"}
       />
       <ProjectCard
         date={"October 2024"}
         title={"Portfolio website v1"}
         description={"My very first step into web development"}
         tag={{ icon: TbBrandNextjs, name: "Next.js" }}
+        href={"https://github.com/marqsw/portfolio-site"}
       />
       <ProjectCard
         date={"June 2024"}
@@ -30,6 +33,7 @@ export default function CardGrid() {
         description={"A chess engine that learns to play chess on its own"}
         tag={{ icon: SiPytorch, name: "PyTorch" }}
         coverSrc={"/home/chess-engine-cover.png"}
+        href={"https://marqsw.github.io/"}
       />
     </div>
   );

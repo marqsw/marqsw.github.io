@@ -13,6 +13,9 @@ import {
   TbBrandLinkedin,
   TbMail,
 } from "react-icons/tb";
+import { CiWarning } from "react-icons/ci";
+import { IoIosWarning } from "react-icons/io";
+import { IoWarningOutline } from "react-icons/io5";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,18 +38,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const internalNavLinks: InternalNavLinkType[] = [
-    {
-      name: "Projects",
-      href: "/projects",
-    },
-    {
-      name: "Blogs",
-      href: "/blogs",
-    },
-    {
-      name: "Experience",
-      href: "/experience",
-    },
+    // {
+    //   name: "Projects",
+    //   href: "/projects",
+    // },
+    // {
+    //   name: "Blogs",
+    //   href: "/blogs",
+    // },
+    // {
+    //   name: "Experience",
+    //   href: "/experience",
+    // },
   ];
 
   const externalNavLinks: ExternalNavLinkType[] = [
@@ -59,10 +62,6 @@ export default function RootLayout({
       icon: <TbBrandLinkedin />,
     },
     {
-      href: "",
-      icon: <TbBrandInstagram />,
-    },
-    {
       href: "mailto:marqsw@gmail.com",
       icon: <TbMail />,
     },
@@ -71,7 +70,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} relative flex flex-col antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} relative m-5 flex flex-col antialiased`}
       >
         <ContextProvider>
           <NavBar
@@ -79,8 +78,13 @@ export default function RootLayout({
             externalNavLinks={externalNavLinks}
           />
           <div
-            className={"m-5 my-10 min-h-screen w-screen max-w-3xl self-center"}
+            className={"mx-10 min-h-screen w-screen max-w-3xl self-center p-10"}
           >
+            <div className="glassy-warning flex flex-row items-center gap-2 rounded-xl px-5 py-3 text-sm">
+              <IoWarningOutline /> I am a new site and still in development!
+              More content coming soon.
+            </div>
+
             {children}
           </div>
         </ContextProvider>
