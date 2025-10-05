@@ -4,7 +4,6 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import React, { useContext } from "react";
 import { ScrollDisplacementContext } from "./contexts/ScrollDisplacementContextProvider";
-import { TargetAndTransition } from "motion";
 
 export type InternalNavLinkType = {
   name: string;
@@ -25,12 +24,12 @@ export default function NavBar({
 }>) {
   const scroll = useContext(ScrollDisplacementContext);
 
-  const activeAnimation: TargetAndTransition = { scale: 1 };
-  const inactiveAnimation: TargetAndTransition = {
-    scale: 0.5,
-    translateY: -100,
-    filter: "blur(0.5em)",
-  };
+  // const activeAnimation: TargetAndTransition = { scale: 1 };
+  // const inactiveAnimation: TargetAndTransition = {
+  //   scale: 0.5,
+  //   translateY: -100,
+  //   filter: "blur(0.5em)",
+  // };
 
   return (
     <motion.div

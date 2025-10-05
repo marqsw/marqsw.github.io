@@ -7,14 +7,7 @@ import NavBar, {
 } from "@/components/NavBar";
 import ContextProvider from "@/components/contexts/ContextProvider";
 import React from "react";
-import {
-  TbBrandGithub,
-  TbBrandInstagram,
-  TbBrandLinkedin,
-  TbMail,
-} from "react-icons/tb";
-import { CiWarning } from "react-icons/ci";
-import { IoIosWarning } from "react-icons/io";
+import { TbBrandGithub, TbBrandLinkedin, TbMail } from "react-icons/tb";
 import { IoWarningOutline } from "react-icons/io5";
 
 const geistSans = Geist({

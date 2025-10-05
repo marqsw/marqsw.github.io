@@ -11,8 +11,7 @@ export default function Hero() {
       }}
     >
       <h1 className={"p-5"}>
-        {" "}
-        Hi. I'm a{" "}
+        Hi. I&apos;m a{" "}
         <span
           className={
             "bg-gradient-to-tr from-indigo-600 to-cyan-600 bg-clip-text text-transparent text-shadow-none"
