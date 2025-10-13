@@ -10,7 +10,7 @@ export default function CardGrid() {
         title={"Portfolio website v2"}
         description={"Learned a lot since then, time to revamp the website"}
         tag={{ icon: TbBrandNextjs, name: "Next.js" }}
-        href={"https://marqsw.github.io/"}
+        href={"https://github.com/marqsw/marqsw.github.io"}
       />
       <ProjectCard
         date={"November 2024"}
@@ -18,7 +18,7 @@ export default function CardGrid() {
         description={"A sensor app with neumorphic design"}
         tag={{ icon: TbBrandReactNative, name: "React Native" }}
         coverSrc={"/home/sensors-cover.png"}
-        href={"https://github.com/marqsw/Sensors"}
+        href={"https://github.com/marqsw/marqsw.github.io"}
       />
       <ProjectCard
         date={"October 2024"}
@@ -33,7 +33,7 @@ export default function CardGrid() {
         description={"A chess engine that learns to play chess on its own"}
         tag={{ icon: SiPytorch, name: "PyTorch" }}
         coverSrc={"/home/chess-engine-cover.png"}
-        href={"https://marqsw.github.io/"}
+        href={"https://github.com/marqsw/AI-Chess-Engine"}
       />
     </div>
   );
